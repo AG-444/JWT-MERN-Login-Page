@@ -1,10 +1,10 @@
 const express = require("express");
-const signupRoute = require("./routes/signup");
-const loginRoute = require("./routes/login");
-const userRoute = require("./routes/user");
+const signupRoute = require("./src/routes/signup");
+const loginRoute = require("./src/routes/login");
+const userRoute = require("./src/routes/user");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const createAdminAccount = require("./scripts/admin");
+const createAdminAccount = require("./src/scripts/admin");
 const { default: mongoose } = require("mongoose");
 
 const app = express();
