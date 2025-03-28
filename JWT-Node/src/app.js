@@ -21,6 +21,9 @@ app.use(cors(
 
 mongoose.connect('mongodb+srv://aditya444garg:zYsHyKLF8rBkbmrQ@farmsense-prototype.8yh6eru.mongodb.net/?retryWrites=true&w=majority&appName=farmsense-prototype')
 
+app.get("/api/hello", (req, res) => {
+    res.json({ message: "Hello from the API!" });
+  });
 createAdminAccount();
 
 app.use("/user",signupRoute);
