@@ -16,11 +16,14 @@ const Header = () => {
             <Navbar bg ={token ? "primary":"dark"} variant='dark'>
                 <Container>
                     <Navbar.Brand as={Link} to="?">
-                        {token ? "Logged-in":"Not Logged-In"}
+                        <h3>FarmSense</h3>
                     </Navbar.Brand>
                     <Nav className='ml-auto'>
                         {token ? (
                             <>
+                                <p className='welcome-msg'>
+                                    {token ? "welcome!":"Please Login"}
+                                </p>
                                 <Nav.Link as={Link} to="/dashboard" className="nav-link">
                                     Dashboard
                                 </Nav.Link>
